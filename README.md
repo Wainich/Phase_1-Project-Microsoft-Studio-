@@ -188,9 +188,3 @@
 * Matplotlib
 * Seaborn
 * SQLite3
-  
-
----
-## For More Information
-
-* Please review the full analysis in the [Jupyter Notebook](/student.ipynb) or the [Presentation](/Presentation.pdf).
