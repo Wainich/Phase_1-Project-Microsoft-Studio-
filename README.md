@@ -46,15 +46,15 @@
 
 ### 2. Data Understanding
 
-* This analysis uses [datasets](./data/) obtained from two renowned movie websites:
+* This analysis uses [datasets](./zippedData/) obtained from two renowned movie websites:
 
   1. [The Numbers](https://www.the-numbers.com/) - `tn.movie_budgets.csv.gz`
 
   2. [IMDB](https://www.imdb.com/) - `im.db.zip`
 
-* From the [first dataset](data/tn.movie_budgets.csv.gz) which is in `.csv` format, we have the names, release dates, and monetary information of films that have been released and those are are yet to be released.With RoI being the target variable, the monetary data (production budget and worldwide gross) columns are the main reason this dataset was selected. Furthermore, the movie title and release date columns make this dataset an all round good starting point for the data preparation stage.
+* From the [first dataset](zippedData/tn.movie_budgets.csv.gz) which is in `.csv` format, we have the names, release dates, and monetary information of films that have been released and those are are yet to be released.With RoI being the target variable, the monetary data (production budget and worldwide gross) columns are the main reason this dataset was selected. Furthermore, the movie title and release date columns make this dataset an all round good starting point for the data preparation stage.
 
-* From the [second dataset](data/im.db.zip) which is in `.db` format, we have database with 8 tables containing different types of non-monetary information about films such as their directors, writers, and genres, and the ratings and [more](images/imdb_data_erd.jpeg). This information will be used to understand the characteristics of the films that are currently performing the best at the box office.
+* From the [second dataset](zippedData/im.db.zip) to read it into the studeny.ipynb, we first have to open it and copy the path to the read_sql module I could not find a way around that. We have database with 8 tables containing different types of non-monetary information about films such as their directors, writers, and genres, and the ratings. This information will be used to understand the characteristics of the films that are currently performing the best at the box office.
 
 ---
 
@@ -62,7 +62,7 @@
 
 * The process used to analyze the data in this project is as follows:
 
-  1. Narrow the [first dataset](data/tn.movie_budgets.csv.gz) down to the movies that have been released within the past ten years using the 'release_date' column. This is because we are looking for films that are **currently** performing the best.
+  1. Narrow the [first dataset](zippedData/tn.movie_budgets.csv.gz) down to the movies that have been released within the past ten years using the 'release_date' column. This is because we are looking for films that are **currently** performing the best.
 
   2. Sort the DataFrame by the worldwide gross column in descending order and slice the first 200 rows. We shall be analysing the RoI based on the highest grossing films. Furthermore, narrowing the DataFrame to the top 200 records will ensure that the films selected have a gross that is around $300 million or more. This is a good worldwide gross for a film.
 
