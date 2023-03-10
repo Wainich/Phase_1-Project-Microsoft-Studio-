@@ -4,3 +4,8 @@ __pycache__
 *.pytest_cache
 .gitattributes
 !*.zip
+*.Another_trial.ipynb
+*.imdb.ipynb
+*.practice.ipynb
+*.sql_imdb.ipynb
+
